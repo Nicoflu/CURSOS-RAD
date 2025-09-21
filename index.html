@@ -1,97 +1,37 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <title>Código de Python con Turtle</title>
+</head>
+<body>
 
- <head>
-  <meta charset="UTF-8">
+    <h1>Código de dibujo con Python</h1>
+    <p>Este es el código Python que crea una figura con la biblioteca Turtle. El HTML solo lo muestra como texto, no lo ejecuta.</p>
 
-  <title> Curso </title>  
+    <pre><code>
+from turtle import *
+import colorsys
 
-    <link rel="stylesheet" href="styl.css">
+bgcolor('black')
+pensize(2)
+tracer(10)
+h=0
 
-    <link rel="stylesheet" href="style2.css">
+colores = ['white', '#ffcb7d', '#FFA216']
 
+def dibujo(a,n):
+    circle(5+n,60), left(a), circle(5+n,60)
 
-   
-</style>
+for i in range(360):
+    color_index = (i // 15) % 3
+    c = colores[color_index]
+    color(c, 'black'), begin_fill()
+    dibujo(90,i/2), end_fill()
+    dibujo(160,i*1.2), penup()
+    dibujo(0,0), dibujo(90,i/2), pendown()
 
- </head>
+done()
+    </code></pre>
 
- <body>
-
-  <h1><p> Cursos de RAD: Rapido Aprendizaje Dinamico </p></h1>
-   <HR aligh= "center" size="1" width="110%" color="black" noshade>
-
-<h3 class="text">Cursos</h3>
-   <HR aligh= "center" size="1" width="110%" color="black" noshade>
-
-<main class="page-content">
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 00 - Curso de Software </h2>
-      <p class="copy">Inicia en el mundo de la programación.</p>
-      <a href="https://nicoflu.github.io/SOFTWARE-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 01 - Diagramas de Flujo </h2>
-      <p class="copy"> Crea Diagramas de Flujo. </p>
-      <a href="https://nicoflu.github.io/FLUJO-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 02 - Desarrolla Software </h2>
-      <p class="copy"> Curso basico.</p>
-      <a href="https://nicoflu.github.io/APLICACION-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 03 - Curso de Acces </h2>
-      <p class="copy"> Access a Más Profundidad. </p>
-      <a href="https://nicoflu.github.io/RAD-ACCESS/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 04 - Programación Estructurada </h2>
-      <p class="copy"> Estructura Programas. </p>
-      <a href="https://nicoflu.github.io/ESTRUCTURA-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 05 - FUNCIONES </h2>
-      <p class="copy"> Funciones en Programación. </p>
-      <a href="https://nicoflu.github.io/FUNCIONES-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 06 - Geometría Analitica </h2>
-      <p class="copy">  Difunde Más tus Conocimientos. </p>
-      <a href="https://nicoflu.github.io/GEOMETRIA-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="content">
-      <h2 class="title"> 07 - Ingles 3 </h2>
-      <p class="copy"> Ingles Avanzado. </p>
-      <a href="https://nicoflu.github.io/INGLES3-RAD/" button class="btn">Ver Curso</button> </a>
-    </div>
-  </div>
-
-
-
-
-
-
-  <br>
-
-
-
- </body>
-
+</body>
 </html>
